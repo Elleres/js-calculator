@@ -13,7 +13,7 @@ body {
 
 div.calculator {
     width: 300px;
-    height: 450px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -24,12 +24,30 @@ div.calculator {
     border-radius: 10px;
 }
 
+.buttonsClear {
+    display: flex;
+    justify-content: space-between;
+}
+
 .buttons {
     display: flex;
     height: auto;
     flex-wrap: wrap;
     gap: 20px;
 
+}
+
+.clear {
+    width: 120px;
+    background-color: gray;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 20px;
+    color: aliceblue;
+    user-select: none;
 }
 
 .screen {
@@ -45,7 +63,8 @@ div.calculator {
     font-size: 24px;
 }
 
-.button {
+.button,
+.buttonNum {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,5 +74,5 @@ div.calculator {
     background-color: gray;
     border-radius: 50%;
     font-size: 30px;
-
+    user-select: none;
 }
