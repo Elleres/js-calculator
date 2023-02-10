@@ -22,6 +22,7 @@ div.calculator {
     padding: 30px;
     padding-top: 20px;
     border-radius: 10px;
+    border: solid 2px rgb(243, 233, 233);
 }
 
 .buttonsClear {
@@ -33,8 +34,7 @@ div.calculator {
     display: flex;
     height: auto;
     flex-wrap: wrap;
-    gap: 20px;
-
+    gap: 15px;
 }
 
 .clear {
@@ -48,12 +48,14 @@ div.calculator {
     font-size: 20px;
     color: aliceblue;
     user-select: none;
+    border: solid 1px rgb(243, 233, 233);
 }
 
 .screen {
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 5px;
     margin-top: 12px;
     color: aliceblue;
@@ -63,8 +65,9 @@ div.calculator {
     font-size: 24px;
 }
 
-.button,
+.buttonCalc,
 .buttonNum {
+    border: solid 1px rgb(243, 233, 233);
     display: flex;
     justify-content: center;
     align-items: center;
