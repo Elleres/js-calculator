@@ -51,12 +51,28 @@ buttonsCalc.forEach(button => {
             upNumber.textContent = downNumber.textContent;
             downNumber.textContent = "";
             inputString = "";
-            presentOperator = button.innerHTML;
+            presentOperator = {
+                op: button.id,
+                symbol: button.innerHTML,
+            };
         } else {
             secondOperand = downNumber.textContent
-            upNumber.textContent += presentOperator + downNumber.textContent
-            downNumber.textContent = parseInt(firstOperand) + parseInt(secondOperand)
+            upNumber.textContent += " " + presentOperator.symbol + " " + downNumber.textContent
+            downNumber.textContent = calc(parseFloat(firstOperand), parseFloat(secondOperand), presentOperator.op)
         }
     })
 })
 
+
+function calc(firstOperand, secondOperand, operation) {
+    switch (operation) {
+        case "divide":
+            return firstOperand / secondOperand;
+        case "multiply":
+            return firstOperand * secondOperand
+        case "minus":
+            return firstOperand - secondOperand
+        case "plus":
+            return firstOperand + secondOperand
+    }
+}

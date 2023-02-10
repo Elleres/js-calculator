@@ -25,6 +25,8 @@ div.calculator {
     border: solid 2px rgb(243, 233, 233);
 }
 
+
+
 .buttonsClear {
     display: flex;
     justify-content: space-between;
